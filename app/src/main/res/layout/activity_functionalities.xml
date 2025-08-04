@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/functionalitiesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose a Functionality"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Pick Image from Gallery"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnDial"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Dial Phone Number"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Send Email"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSMS"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Send SMS"
+            android:backgroundTint="#E91E63"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnOpenWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Visit Website"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnOpenMaps"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#7B68EE"
+            android:text="Open Maps"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnPlayTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watch Tutorial Video"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnAddCalendarEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Event to Google Calendar"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
