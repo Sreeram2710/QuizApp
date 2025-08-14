@@ -93,6 +93,29 @@
             android:backgroundTint="@color/purple_500"
             android:textColor="@android:color/white" />
 
+        <Button
+            android:id="@+id/btnRss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open RSS Feed"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnCloudContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Cloud Contacts (Firestore)"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnSqlContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open SQL Contacts (HTTP)"
+            android:layout_marginTop="12dp" />
+
+
+
 
     </LinearLayout>
 </ScrollView>

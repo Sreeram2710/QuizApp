@@ -8,6 +8,14 @@ import android.provider.CalendarContract
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.ktx.firestore
+import kotlinx.coroutines.tasks.await
+
+
 
 class FunctionalitiesActivity : AppCompatActivity() {
 
@@ -16,6 +24,28 @@ class FunctionalitiesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_functionalities)
+
+        findViewById<Button>(R.id.btnSqlContacts).setOnClickListener {
+            startActivity(Intent(this, SqlContactsActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btnCloudContacts).setOnClickListener {
+            startActivity(Intent(this, CloudContactsActivity::class.java))
+        }
+
+
+        lifecycleScope.launch {
+            val db = Firebase.firestore
+            // read the doc you added
+            val snap = db.collection("contacts_nosql").get().await()
+            Log.d("FirestoreTest", "contacts_nosql count = ${snap.size()}")
+        }
+
+
+        findViewById<Button>(R.id.btnRss).setOnClickListener {
+            startActivity(Intent(this, RssActivity::class.java))
+        }
+
 
         // Pick image from gallery
         findViewById<Button>(R.id.btnGallery).setOnClickListener {

@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -15,67 +17,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <!--
-             TODO: Before you run your application, you need a Google Maps API key.
-
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-        -->
+        <!-- Google Maps API Key (from Gradle manifestPlaceholders) -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="${MAPS_API_KEY}" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
+        <!-- Launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FunctionalitiesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ContactUsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ResultsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SummaryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".QuizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="false" />
+
+        <!-- Main started by Splash -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Features / screens -->
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:exported="false" />
+        <activity android:name=".FunctionalitiesActivity" android:exported="false" />
+        <activity android:name=".ContactUsActivity"       android:exported="false" />
+        <activity android:name=".ResultsActivity"         android:exported="false" />
+        <activity android:name=".SummaryActivity"         android:exported="false" />
+        <activity android:name=".QuizActivity"            android:exported="false" />
+        <activity android:name=".DashboardActivity"       android:exported="false" />
+        <activity android:name=".SignUpActivity"          android:exported="false" />
+        <activity android:name=".RssActivity"             android:exported="false" />
+        <activity android:name=".CloudContactsActivity"   android:exported="false" />
+        <activity android:name=".SqlContactsActivity"     android:exported="false" />
 
     </application>
-
 </manifest>

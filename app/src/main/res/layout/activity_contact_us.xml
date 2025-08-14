@@ -1,102 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:padding="16dp">
 
-    <!-- Blur or semi-transparent overlay -->
-
-    <!-- Form Card -->
-<androidx.cardview.widget.CardView
-android:id="@+id/contactCard"
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:layout_margin="24dp"
-android:elevation="10dp"
-android:backgroundTint="#FFFFFF"
-app:cardCornerRadius="20dp"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintEnd_toEndOf="parent">
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="24dp">
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/contactTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact Us"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="#6200EE"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
+        android:orientation="vertical">
 
-    <!-- Name -->
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Your Name"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="16dp" />
+        <!-- Phone input + Dial -->
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:inputType="phone" />
 
-    <!-- Email -->
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Your Email"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/dialBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dial Number"
+            android:layout_marginTop="12dp" />
 
-    <!-- Message -->
-    <EditText
-        android:id="@+id/etMessage"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:hint="Your Message"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
-        android:gravity="top"
-        android:inputType="textMultiLine"
-        android:layout_marginBottom="24dp" />
+        <!-- Calendar fields + Add button -->
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event title"
+            android:layout_marginTop="24dp" />
 
-    <!-- Submit Button -->
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Submit"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#6200EE"
-        android:fontFamily="sans-serif-medium"
-        android:letterSpacing="0.05"
-        android:textSize="16sp" />
+        <EditText
+            android:id="@+id/eventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event location" />
 
-    <Button
-        android:id="@+id/btnBackToDashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dashboard"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#6200EE"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-medium" />
-</LinearLayout>
-</androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/addCalendarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Calendar Event"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>
