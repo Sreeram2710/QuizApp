@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">QuizApp</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="hint_search_name">Search by name (prefix)</string>
+    <string name="btn_search">Search</string>
+    <string name="label_no_contacts">No contacts in Firestore.</string>
+    <string name="label_no_matches">No matches for “%1$s”.</string>
+    <string name="screen_title_cloud_contacts">Cloud Contacts</string>
+
 </resources>
